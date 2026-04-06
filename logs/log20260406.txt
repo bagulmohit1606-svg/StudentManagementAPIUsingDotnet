@@ -1,0 +1,1064 @@
+2026-04-06 11:57:17.257 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-04-06 11:57:17.341 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-04-06 11:57:17.411 +05:30 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-04-06 11:57:17.615 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-04-06 11:57:17.635 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-04-06 11:57:17.643 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-04-06 11:57:17.700 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-04-06 11:57:17.716 +05:30 [INF] Applying migration '20260406060814_InitialCreate'.
+2026-04-06 11:57:17.768 +05:30 [ERR] Failed executing DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Students] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [Course] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Students] PRIMARY KEY ([Id])
+);
+2026-04-06 11:57:35.410 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 11:57:35.519 +05:30 [INF] Creating key {31c3b152-3109-44f8-8545-6876f00c9c05} with creation date 2026-04-06 06:27:35Z, activation date 2026-04-06 06:27:35Z, and expiration date 2026-07-05 06:27:35Z.
+2026-04-06 11:57:35.557 +05:30 [INF] Writing data to file 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys\key-31c3b152-3109-44f8-8545-6876f00c9c05.xml'.
+2026-04-06 11:57:35.833 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 11:57:35.837 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 11:57:35.839 +05:30 [INF] Hosting environment: Development
+2026-04-06 11:57:35.841 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 11:57:52.658 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 11:57:52.748 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 11:57:54.928 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 2273.7291ms
+2026-04-06 11:57:54.940 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 11:57:57.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 11:57:57.691 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 21.5101ms
+2026-04-06 11:57:57.700 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 11:57:58.913 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 11:57:58.927 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 14.5768ms
+2026-04-06 11:57:58.939 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 11:58:16.703 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 11:58:16.722 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 19.4886ms
+2026-04-06 11:58:16.734 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 11:59:40.854 +05:30 [INF] Application is shutting down...
+2026-04-06 12:03:27.088 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 12:03:27.294 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 12:03:27.298 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 12:03:27.300 +05:30 [INF] Hosting environment: Development
+2026-04-06 12:03:27.302 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 12:03:39.999 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger - null null
+2026-04-06 12:03:40.078 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger - 301 0 null 82.6004ms
+2026-04-06 12:03:40.091 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:03:40.214 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 200 null text/html;charset=utf-8 124.113ms
+2026-04-06 12:03:40.258 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:03:40.276 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:03:40.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:03:40.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:03:40.281 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:03:40.313 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 200 null application/javascript;charset=utf-8 31.6934ms
+2026-04-06 12:03:40.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 200 26479 text/css 70.8257ms
+2026-04-06 12:03:40.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 200 152 text/css 53.2184ms
+2026-04-06 12:03:40.363 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 82.8226ms
+2026-04-06 12:03:40.363 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 82.7971ms
+2026-04-06 12:03:40.626 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:03:40.658 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:03:40.668 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 200 628 image/png 10.1598ms
+2026-04-06 12:03:40.841 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 214.8849ms
+2026-04-06 12:04:15.511 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:04:15.524 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 12:04:15.581 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:04:15.628 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:04:17.444 +05:30 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 12:04:17.514 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 12:04:17.566 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 1925.2177ms
+2026-04-06 12:04:17.572 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:04:17.595 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 2084.2159ms
+2026-04-06 12:05:36.301 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 139
+2026-04-06 12:05:36.311 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 12:05:36.350 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:05:36.814 +05:30 [ERR] Failed executing DbCommand (86ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Id], [Age], [Course], [CreatedDate], [Email], [Name])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-04-06 12:05:36.860 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'StudentManagementSystem.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Students' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e0f636f9-3de5-49a9-9f4b-f71b239a9abf
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Students' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e0f636f9-3de5-49a9-9f4b-f71b239a9abf
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-06 12:05:36.881 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 525.6077ms
+2026-04-06 12:05:36.884 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 12:05:36.888 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Students' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:e0f636f9-3de5-49a9-9f4b-f71b239a9abf
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at StudentManagementSystem.Repositories.StudentRepository.Add(Student student) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Repositories\StudentRepository.cs:line 26
+   at StudentManagementSystem.Services.StudentService.Add(Student student) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Services\StudentService.cs:line 21
+   at StudentManagementSystem.Controllers.StudentController.Add(Student student) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Controllers\StudentController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-04-06 12:05:36.938 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 500 null text/plain; charset=utf-8 636.9082ms
+2026-04-06 12:06:09.254 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 128
+2026-04-06 12:06:09.266 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 12:06:09.269 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:06:09.484 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 12:06:09.546 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-04-06 12:06:09.549 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 275.1684ms
+2026-04-06 12:06:09.552 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 12:06:09.555 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null text/plain; charset=utf-8 301.0816ms
+2026-04-06 12:06:33.308 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:06:33.317 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:06:33.323 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:06:33.360 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 12:06:33.383 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 12:06:33.393 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 58.0781ms
+2026-04-06 12:06:33.397 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:06:33.446 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 137.4108ms
+2026-04-06 12:09:03.060 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5013/api/Student - application/json 125
+2026-04-06 12:09:03.066 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 12:09:03.086 +05:30 [INF] Route matched with {action = "Update", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:09:03.155 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Age] = @p0, [Course] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-04-06 12:09:03.164 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-04-06 12:09:03.168 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem) in 78.0284ms
+2026-04-06 12:09:03.171 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 12:09:03.175 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5013/api/Student - 200 null text/plain; charset=utf-8 115.3931ms
+2026-04-06 12:09:10.877 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:09:10.882 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:09:10.886 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:09:10.911 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 12:09:10.924 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 12:09:10.930 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 32.102ms
+2026-04-06 12:09:10.934 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:09:10.938 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 60.3147ms
+2026-04-06 12:10:00.104 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/1 - null null
+2026-04-06 12:10:00.112 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 12:10:00.136 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:10:00.360 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 12:10:00.386 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Students]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-04-06 12:10:00.397 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-04-06 12:10:00.400 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 258.2525ms
+2026-04-06 12:10:00.403 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 12:10:00.406 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/1 - 200 null text/plain; charset=utf-8 302.6937ms
+2026-04-06 12:10:35.683 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:10:35.689 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:10:35.692 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:10:35.708 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 12:10:35.716 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 12:10:35.720 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 19.4628ms
+2026-04-06 12:10:35.727 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:10:35.730 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 46.7192ms
+2026-04-06 12:21:03.493 +05:30 [INF] Application is shutting down...
+2026-04-06 12:21:26.815 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 12:21:27.069 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 12:21:27.075 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 12:21:27.077 +05:30 [INF] Hosting environment: Development
+2026-04-06 12:21:27.078 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 12:21:51.052 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:21:51.268 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 304 null null 219.0951ms
+2026-04-06 12:21:51.316 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:21:51.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:21:51.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:21:51.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:21:51.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:21:51.347 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 304 null null 24.5065ms
+2026-04-06 12:21:51.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 304 null null 42.5572ms
+2026-04-06 12:21:51.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 304 null null 34.8432ms
+2026-04-06 12:21:51.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 304 null null 38.076ms
+2026-04-06 12:21:51.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 304 null null 35.4621ms
+2026-04-06 12:21:51.685 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:21:51.690 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:21:51.700 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 304 null null 9.9587ms
+2026-04-06 12:21:51.924 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 238.9829ms
+2026-04-06 12:22:10.188 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:22:10.195 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 304 null null 6.9942ms
+2026-04-06 12:22:10.238 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:22:10.246 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:22:10.246 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:22:10.247 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:22:10.249 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:22:10.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 304 null null 12.6816ms
+2026-04-06 12:22:10.257 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 304 null null 11.3468ms
+2026-04-06 12:22:10.268 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 304 null null 21.6555ms
+2026-04-06 12:22:10.291 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 304 null null 45.0339ms
+2026-04-06 12:22:10.296 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 304 null null 46.2825ms
+2026-04-06 12:22:10.413 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:22:10.418 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:22:10.425 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 304 null null 6.4324ms
+2026-04-06 12:22:10.427 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.2657ms
+2026-04-06 12:22:56.908 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 12:22:56.935 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 12:22:56.999 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:22:57.031 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 12:22:57.294 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 252.7537ms
+2026-04-06 12:22:57.297 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:22:57.300 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '88'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at StudentManagementSystem.Controllers.AuthController.GenerateJwtToken(String username) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Controllers\AuthController.cs:line 55
+   at StudentManagementSystem.Controllers.AuthController.Login(LoginModel login) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Controllers\AuthController.cs:line 26
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-04-06 12:22:57.357 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 500 null text/plain; charset=utf-8 448.6613ms
+2026-04-06 12:27:07.275 +05:30 [INF] Application is shutting down...
+2026-04-06 12:27:16.886 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 12:27:17.128 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 12:27:17.133 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 12:27:17.135 +05:30 [INF] Hosting environment: Development
+2026-04-06 12:27:17.137 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 12:27:39.018 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:27:39.282 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 304 null null 268.1527ms
+2026-04-06 12:27:39.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:27:39.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:27:39.321 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:27:39.323 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:27:39.325 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:27:39.361 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 304 null null 35.0855ms
+2026-04-06 12:27:39.368 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 304 null null 48.2187ms
+2026-04-06 12:27:39.368 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 304 null null 44.6961ms
+2026-04-06 12:27:39.368 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 304 null null 52.5025ms
+2026-04-06 12:27:39.368 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 304 null null 46.8661ms
+2026-04-06 12:27:39.482 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:27:39.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:27:39.494 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 304 null null 7.3337ms
+2026-04-06 12:27:39.781 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 299.2724ms
+2026-04-06 12:27:47.316 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:27:47.332 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 12:27:47.402 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:27:47.444 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 12:27:50.306 +05:30 [INF] Executed DbCommand (95ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 12:27:50.386 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 12:27:50.452 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 2995.204ms
+2026-04-06 12:27:50.456 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 12:27:50.481 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 3165.1042ms
+2026-04-06 12:28:08.604 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 12:28:08.616 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:28:08.636 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 12:28:08.749 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 108.3871ms
+2026-04-06 12:28:08.753 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:28:08.756 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '200' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at StudentManagementSystem.Controllers.AuthController.GenerateJwtToken(String username) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Controllers\AuthController.cs:line 55
+   at StudentManagementSystem.Controllers.AuthController.Login(LoginModel login) in C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem\Controllers\AuthController.cs:line 26
+   at lambda_method22(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-04-06 12:28:08.804 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 500 null text/plain; charset=utf-8 199.5959ms
+2026-04-06 12:29:27.733 +05:30 [INF] Application is shutting down...
+2026-04-06 12:29:38.932 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 12:29:39.184 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 12:29:39.189 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 12:29:39.191 +05:30 [INF] Hosting environment: Development
+2026-04-06 12:29:39.192 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 12:29:44.405 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:29:44.656 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 304 null null 255.1014ms
+2026-04-06 12:29:44.686 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:29:44.689 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:29:44.692 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:29:44.692 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:29:44.692 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:29:44.719 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 304 null null 27.2791ms
+2026-04-06 12:29:44.729 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 304 null null 43.9018ms
+2026-04-06 12:29:44.729 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 304 null null 36.9896ms
+2026-04-06 12:29:44.729 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 304 null null 40.0571ms
+2026-04-06 12:29:44.729 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 304 null null 37.6751ms
+2026-04-06 12:29:44.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:29:44.847 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:29:44.857 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 304 null null 9.9558ms
+2026-04-06 12:29:45.143 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 300.4959ms
+2026-04-06 12:29:56.462 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 12:29:56.486 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 12:29:56.552 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:29:56.582 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 12:29:56.715 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 12:29:56.743 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 147.9166ms
+2026-04-06 12:29:56.747 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 12:29:56.750 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 200 null application/json; charset=utf-8 288.8737ms
+2026-04-06 12:35:39.319 +05:30 [INF] Application is shutting down...
+2026-04-06 12:36:02.671 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 12:36:03.076 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 12:36:03.082 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 12:36:03.084 +05:30 [INF] Hosting environment: Development
+2026-04-06 12:36:03.085 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 12:36:16.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 12:36:16.287 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 304 null null 240.119ms
+2026-04-06 12:36:16.315 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 12:36:16.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.css - null null
+2026-04-06 12:36:16.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 12:36:16.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 12:36:16.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.js - null null
+2026-04-06 12:36:16.353 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.js - 304 null null 31.9674ms
+2026-04-06 12:36:16.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 304 null null 39.8536ms
+2026-04-06 12:36:16.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 304 null null 46.0831ms
+2026-04-06 12:36:16.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.css - 304 null null 43.377ms
+2026-04-06 12:36:16.360 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 304 null null 40.0274ms
+2026-04-06 12:36:16.481 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 12:36:16.486 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 12:36:16.494 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 304 null null 8.3709ms
+2026-04-06 12:36:16.762 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.0521ms
+2026-04-06 12:36:28.101 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 12:36:28.116 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 12:36:28.187 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 12:36:28.199 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 12:36:28.202 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 401 0 null 100.7929ms
+2026-04-06 12:36:44.281 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 133
+2026-04-06 12:36:44.311 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 12:36:44.315 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 12:36:44.318 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 401 0 null 36.8919ms
+2026-04-06 12:45:20.333 +05:30 [INF] Application is shutting down...
+2026-04-06 13:48:08.933 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 13:48:09.077 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 13:48:09.080 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 13:48:09.081 +05:30 [INF] Hosting environment: Development
+2026-04-06 13:48:09.081 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 13:48:13.755 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 13:48:13.846 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 200 null text/html;charset=utf-8 92.4123ms
+2026-04-06 13:48:13.926 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - null null
+2026-04-06 13:48:13.927 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - null null
+2026-04-06 13:48:13.928 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-06 13:48:13.952 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-04-06 13:48:13.952 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-04-06 13:48:13.952 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-04-06 13:48:13.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 27.5326ms
+2026-04-06 13:48:13.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 27.2954ms
+2026-04-06 13:48:13.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/swagger-ui.css - 200 144929 text/css 29.7831ms
+2026-04-06 13:48:14.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 13:48:14.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - null null
+2026-04-06 13:48:14.167 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-04-06 13:48:14.169 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/favicon-32x32.png - 200 628 image/png 3.9469ms
+2026-04-06 13:48:14.228 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.9321ms
+2026-04-06 13:48:32.066 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 13:48:32.073 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 13:48:33.317 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 13:48:33.322 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 13:48:33.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 401 0 null 1256.4959ms
+2026-04-06 13:48:44.341 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 13:48:44.348 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 13:48:44.350 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 13:48:44.351 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 401 0 null 9.4139ms
+2026-04-06 13:49:10.817 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 13:49:10.821 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 13:49:10.844 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 13:49:10.941 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 13:49:10.950 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 101.6295ms
+2026-04-06 13:49:10.951 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 13:49:10.952 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 200 null application/json; charset=utf-8 135.2174ms
+2026-04-06 13:49:33.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 13:49:33.832 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 13:49:33.841 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 13:49:35.578 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 13:49:35.603 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 13:49:35.608 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 1765.1564ms
+2026-04-06 13:49:35.610 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 13:49:35.617 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 1826.045ms
+2026-04-06 13:51:39.320 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 131
+2026-04-06 13:51:39.323 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 13:51:39.329 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 13:51:39.567 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 13:51:39.594 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 13:51:39.597 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 266.3159ms
+2026-04-06 13:51:39.598 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 13:51:39.599 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 279.3451ms
+2026-04-06 13:52:09.318 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 13:52:09.320 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 13:52:09.321 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 13:52:09.394 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 13:52:09.400 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 13:52:09.403 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 81.228ms
+2026-04-06 13:52:09.404 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 13:52:09.405 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 87.5446ms
+2026-04-06 13:54:25.221 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - null null
+2026-04-06 13:54:25.224 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 13:54:25.231 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 13:54:25.350 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 13:54:25.352 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 13:54:25.353 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 121.1074ms
+2026-04-06 13:54:25.355 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 13:54:25.356 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - 200 null application/json; charset=utf-8 134.6364ms
+2026-04-06 13:57:40.706 +05:30 [INF] Application is shutting down...
+2026-04-06 13:57:50.813 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 13:57:50.913 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 13:57:50.915 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 13:57:50.916 +05:30 [INF] Hosting environment: Development
+2026-04-06 13:57:50.917 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 13:59:39.040 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 13:59:39.126 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 200 null text/html;charset=utf-8 87.2279ms
+2026-04-06 13:59:39.268 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 13:59:39.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.9714ms
+2026-04-06 14:00:11.249 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 14:00:11.256 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 14:00:11.296 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 14:00:11.319 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 14:00:11.383 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:00:11.392 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 68.7369ms
+2026-04-06 14:00:11.393 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 14:00:11.394 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 200 null application/json; charset=utf-8 145.7236ms
+2026-04-06 14:00:44.033 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - null null
+2026-04-06 14:00:44.076 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-06 14:00:44.079 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-04-06 14:00:44.084 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:00:44.090 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:00:44.091 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - 401 0 null 58.1463ms
+2026-04-06 14:01:03.226 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - null null
+2026-04-06 14:01:03.230 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-06 14:01:03.233 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-04-06 14:01:03.235 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:01:03.236 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:01:03.238 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - 401 0 null 11.5332ms
+2026-04-06 14:01:54.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 14:01:54.424 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-06 14:01:54.426 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-04-06 14:01:54.435 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:01:54.436 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:01:54.437 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 401 0 null 15.4951ms
+2026-04-06 14:02:24.916 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 14:02:24.919 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-06 14:02:24.921 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '5TypJvntpwhaV9Wq7qmDn0sTpBM-KgKOtS9jVJbNyKM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-04-06 14:02:24.922 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 14:02:24.923 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 14:02:24.926 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:02:24.928 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 3.6473ms
+2026-04-06 14:02:24.930 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 14:02:24.931 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 200 null application/json; charset=utf-8 15.0267ms
+2026-04-06 14:02:57.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 14:02:57.338 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 14:02:57.350 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:02:58.397 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 14:02:58.467 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 14:02:58.474 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 1121.706ms
+2026-04-06 14:02:58.475 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 14:02:58.483 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 1166.5208ms
+2026-04-06 14:03:11.969 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - null null
+2026-04-06 14:03:11.972 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:03:11.986 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:03:12.122 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 14:03:12.125 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:03:12.127 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 139.3665ms
+2026-04-06 14:03:12.128 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:03:12.129 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - 200 null application/json; charset=utf-8 159.449ms
+2026-04-06 14:08:40.877 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5013/api/Student - application/json 135
+2026-04-06 14:08:40.880 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 14:08:40.888 +05:30 [INF] Route matched with {action = "Update", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:08:41.060 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Age] = @p0, [Course] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-04-06 14:08:41.072 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem) in 182.9813ms
+2026-04-06 14:08:41.074 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 14:08:41.077 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5013/api/Student - 500 null application/json 200.2437ms
+2026-04-06 14:09:08.254 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5013/api/Student - application/json 135
+2026-04-06 14:09:08.257 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 14:09:08.258 +05:30 [INF] Route matched with {action = "Update", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:09:08.277 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Age] = @p0, [Course] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-04-06 14:09:08.285 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:09:08.286 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem) in 26.3248ms
+2026-04-06 14:09:08.288 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 14:09:08.289 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 34.9335ms
+2026-04-06 14:09:22.467 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - null null
+2026-04-06 14:09:22.470 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:09:22.470 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:09:22.481 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 14:09:22.483 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:09:22.484 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 12.5864ms
+2026-04-06 14:09:22.485 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:09:22.487 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - 200 null application/json; charset=utf-8 19.0291ms
+2026-04-06 14:09:38.742 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - null null
+2026-04-06 14:09:38.746 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:09:38.748 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 14:09:38.761 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 14:09:38.783 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Students]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-04-06 14:09:38.788 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 14:09:38.789 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 38.7155ms
+2026-04-06 14:09:38.790 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 14:09:38.791 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - 200 null application/json; charset=utf-8 48.6051ms
+2026-04-06 14:38:31.264 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 14:38:31.475 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 14:38:31.478 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 14:38:31.479 +05:30 [INF] Hosting environment: Development
+2026-04-06 14:38:31.480 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 14:42:44.970 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 14:42:45.067 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 14:42:47.425 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 2459.1135ms
+2026-04-06 14:42:47.453 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 14:42:50.311 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/ - null null
+2026-04-06 14:42:50.319 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/ - 404 0 null 9.5647ms
+2026-04-06 14:42:50.324 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5013/, Response status code: 404
+2026-04-06 14:42:57.432 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/index.html - null null
+2026-04-06 14:42:57.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/index.html - 200 null text/html;charset=utf-8 124.6707ms
+2026-04-06 14:42:57.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - null null
+2026-04-06 14:42:57.876 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 149.9757ms
+2026-04-06 14:48:47.888 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/ - null null
+2026-04-06 14:48:47.888 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/ - null null
+2026-04-06 14:48:47.917 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/ - 404 0 null 30.0042ms
+2026-04-06 14:48:47.917 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/ - 404 0 null 30.0042ms
+2026-04-06 14:48:47.925 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: OPTIONS http://localhost:5013/, Response status code: 404
+2026-04-06 14:48:47.930 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: OPTIONS http://localhost:5013/, Response status code: 404
+2026-04-06 14:49:20.748 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/ - null null
+2026-04-06 14:49:20.755 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/ - 404 0 null 6.299ms
+2026-04-06 14:49:20.760 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: OPTIONS http://localhost:5013/, Response status code: 404
+2026-04-06 14:56:06.497 +05:30 [INF] Application is shutting down...
+2026-04-06 14:56:31.362 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 14:56:31.542 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 14:56:31.545 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 14:56:31.546 +05:30 [INF] Hosting environment: Development
+2026-04-06 14:56:31.546 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 14:56:53.050 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/student - null null
+2026-04-06 14:56:53.050 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/student - null null
+2026-04-06 14:56:53.100 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:56:53.100 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:56:53.113 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/student - 204 null null 66.5289ms
+2026-04-06 14:56:53.114 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/student - 204 null null 66.5385ms
+2026-04-06 14:56:53.122 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/student - null null
+2026-04-06 14:56:53.127 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:56:53.155 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 14:56:53.346 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-04-06 14:56:53.370 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-04-06 14:56:53.380 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:56:53.388 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:56:53.391 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/student - 401 0 null 269.2252ms
+2026-04-06 14:56:53.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/student - null null
+2026-04-06 14:56:53.401 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:56:53.408 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-04-06 14:56:53.411 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-04-06 14:56:53.415 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:56:53.417 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:56:53.419 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/student - 401 0 null 22.9579ms
+2026-04-06 14:57:38.771 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/student - null null
+2026-04-06 14:57:38.771 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/student - null null
+2026-04-06 14:57:38.775 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:38.779 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:38.780 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/student - 204 null null 8.9568ms
+2026-04-06 14:57:38.781 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/student - 204 null null 9.8674ms
+2026-04-06 14:57:38.785 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/student - null null
+2026-04-06 14:57:38.795 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:38.800 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-04-06 14:57:38.803 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-04-06 14:57:38.808 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:57:38.810 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:57:38.811 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/student - 401 0 null 26.3742ms
+2026-04-06 14:57:38.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/student - null null
+2026-04-06 14:57:38.821 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:38.823 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-04-06 14:57:38.827 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-04-06 14:57:38.829 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:57:38.830 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:57:38.832 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/student - 401 0 null 14.9531ms
+2026-04-06 14:57:41.137 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/student - null null
+2026-04-06 14:57:41.142 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:41.143 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/student - 204 null null 6.0645ms
+2026-04-06 14:57:41.149 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/student - application/json 43
+2026-04-06 14:57:41.152 +05:30 [INF] CORS policy execution successful.
+2026-04-06 14:57:41.155 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-04-06 14:57:41.157 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-04-06 14:57:41.160 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-04-06 14:57:41.163 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-04-06 14:57:41.165 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/student - 401 0 null 16.082ms
+2026-04-06 15:35:11.464 +05:30 [INF] User profile is available. Using 'C:\Users\Mohit Bagul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-06 15:35:11.646 +05:30 [INF] Now listening on: http://localhost:5013
+2026-04-06 15:35:11.648 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-06 15:35:11.649 +05:30 [INF] Hosting environment: Development
+2026-04-06 15:35:11.650 +05:30 [INF] Content root path: C:\Users\Mohit Bagul\Desktop\Dotnet Project\StudentManagementSystem
+2026-04-06 15:35:59.151 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5013/api/auth/login - null null
+2026-04-06 15:35:59.205 +05:30 [INF] CORS policy execution successful.
+2026-04-06 15:35:59.223 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5013/api/auth/login - 204 null null 76.4894ms
+2026-04-06 15:35:59.235 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/auth/login - application/json 35
+2026-04-06 15:35:59.244 +05:30 [INF] CORS policy execution successful.
+2026-04-06 15:35:59.269 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-04-06 15:35:59.334 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 15:35:59.372 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 15:35:59.450 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2026-04-06 15:35:59.461 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 78.1524ms
+2026-04-06 15:35:59.464 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 15:35:59.470 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/auth/login - 401 null text/plain; charset=utf-8 233.5929ms
+2026-04-06 15:36:37.856 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Auth/login - application/json 47
+2026-04-06 15:36:37.862 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:36:37.864 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:36:37.873 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 15:36:37.875 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(StudentManagementSystem.Controllers.LoginModel) on controller StudentManagementSystem.Controllers.AuthController (StudentManagementSystem).
+2026-04-06 15:36:37.945 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:36:37.964 +05:30 [INF] Executed action StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem) in 83.9031ms
+2026-04-06 15:36:37.966 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.AuthController.Login (StudentManagementSystem)'
+2026-04-06 15:36:37.968 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Auth/login - 200 null application/json; charset=utf-8 112.1345ms
+2026-04-06 15:37:19.816 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:37:19.921 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:37:19.937 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:37:23.165 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:37:23.214 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:37:23.231 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 3291.9101ms
+2026-04-06 15:37:23.236 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:37:23.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 3435.6105ms
+2026-04-06 15:38:08.083 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 146
+2026-04-06 15:38:08.088 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:38:08.089 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:38:08.096 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:38:08.110 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:38:08.530 +05:30 [INF] Executed DbCommand (90ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 15:38:08.587 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:38:08.591 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 478.4876ms
+2026-04-06 15:38:08.593 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:38:08.596 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 512.7338ms
+2026-04-06 15:39:17.080 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5013/api/Student - application/json 143
+2026-04-06 15:39:17.086 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:39:17.095 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:39:17.108 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 15:39:17.119 +05:30 [INF] Route matched with {action = "Update", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:39:17.306 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Age] = @p0, [Course] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-04-06 15:39:17.336 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem) in 213.2432ms
+2026-04-06 15:39:17.338 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 15:39:17.348 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5013/api/Student - 500 null application/json 268.0777ms
+2026-04-06 15:39:57.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:39:57.330 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:39:57.331 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:39:57.351 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:39:57.364 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:39:57.372 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 35.6764ms
+2026-04-06 15:39:57.374 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:39:57.376 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 54.7972ms
+2026-04-06 15:40:27.940 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - null null
+2026-04-06 15:40:27.944 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:40:27.947 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:40:27.956 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 15:40:27.972 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:40:28.203 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 15:40:28.228 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Students]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-04-06 15:40:28.237 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:40:28.240 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 264.7463ms
+2026-04-06 15:40:28.242 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 15:40:28.244 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/3 - 200 null application/json; charset=utf-8 304.6053ms
+2026-04-06 15:40:45.259 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:40:45.263 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:40:45.269 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:40:45.283 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:40:45.290 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:40:45.295 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 21.7628ms
+2026-04-06 15:40:45.302 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:40:45.304 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 45.0082ms
+2026-04-06 15:40:56.465 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - null null
+2026-04-06 15:40:56.470 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:40:56.472 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:40:56.475 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 15:40:56.482 +05:30 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:40:56.586 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @p
+2026-04-06 15:40:56.590 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:40:56.591 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem) in 25.1793ms
+2026-04-06 15:40:56.594 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Delete (StudentManagementSystem)'
+2026-04-06 15:40:56.596 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5013/api/Student/2 - 200 null application/json; charset=utf-8 130.627ms
+2026-04-06 15:41:34.769 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 132
+2026-04-06 15:41:34.773 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:41:34.774 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:41:34.778 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:41:34.781 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:41:34.815 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 15:41:34.820 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:41:34.824 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 35.2219ms
+2026-04-06 15:41:34.826 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:41:34.828 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 58.5972ms
+2026-04-06 15:42:03.806 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 135
+2026-04-06 15:42:03.811 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:42:03.815 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:42:03.828 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:42:03.843 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:42:03.856 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 15:42:03.863 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:42:03.869 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 21.5247ms
+2026-04-06 15:42:03.874 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:42:03.876 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 70.1702ms
+2026-04-06 15:42:14.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:42:14.367 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:42:14.370 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:42:14.417 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:42:14.422 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:42:14.424 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 49.3989ms
+2026-04-06 15:42:14.428 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:42:14.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 67.9178ms
+2026-04-06 15:43:09.935 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5013/api/Student - application/json 152
+2026-04-06 15:43:09.940 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:43:09.941 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:43:09.948 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 15:43:09.953 +05:30 [INF] Route matched with {action = "Update", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:43:09.995 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [Age] = @p0, [Course] = @p1, [CreatedDate] = @p2, [Email] = @p3, [Name] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-04-06 15:43:09.999 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:43:10.001 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem) in 35.2615ms
+2026-04-06 15:43:10.005 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Update (StudentManagementSystem)'
+2026-04-06 15:43:10.008 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 72.7605ms
+2026-04-06 15:43:23.258 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:43:23.263 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:43:23.265 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:43:23.310 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:43:23.315 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:43:23.318 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 39.3117ms
+2026-04-06 15:43:23.321 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:43:23.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 64.9963ms
+2026-04-06 15:45:19.677 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5013/api/Student - application/json 137
+2026-04-06 15:45:19.684 +05:30 [INF] CORS policy execution failed.
+2026-04-06 15:45:19.685 +05:30 [INF] Request origin http://localhost:5013 does not have permission to access the resource.
+2026-04-06 15:45:19.707 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:45:19.711 +05:30 [INF] Route matched with {action = "Add", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(StudentManagementSystem.Models.Student) on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:45:19.733 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [Course], [CreatedDate], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-04-06 15:45:19.739 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-06 15:45:19.741 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem) in 27.8689ms
+2026-04-06 15:45:19.744 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.Add (StudentManagementSystem)'
+2026-04-06 15:45:19.747 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 69.4137ms
+2026-04-06 15:45:37.368 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5013/api/Student - null null
+2026-04-06 15:45:37.402 +05:30 [INF] Executing endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:45:37.406 +05:30 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller StudentManagementSystem.Controllers.StudentController (StudentManagementSystem).
+2026-04-06 15:45:37.428 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Course], [s].[CreatedDate], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-04-06 15:45:37.435 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[StudentManagementSystem.Models.Student, StudentManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-06 15:45:37.437 +05:30 [INF] Executed action StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem) in 25.2403ms
+2026-04-06 15:45:37.443 +05:30 [INF] Executed endpoint 'StudentManagementSystem.Controllers.StudentController.GetAll (StudentManagementSystem)'
+2026-04-06 15:45:37.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5013/api/Student - 200 null application/json; charset=utf-8 77.119ms
